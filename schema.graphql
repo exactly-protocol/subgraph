@@ -487,3 +487,18 @@ type TimelockControllerMinDelaySet @entity {
   block: Int!
   timestamp: Int!
 }
+
+type RewardAmountNotified @entity {
+  id: ID! #
+  reward: Bytes!
+  amount: BigInt!
+  notifier: Bytes!
+  timestamp: Int!
+}
+
+type StakingSharedFee @entity {
+  id: ID!
+  reward: Bytes!
+  amount: BigInt!
+  lastUpdate: Int!
+}

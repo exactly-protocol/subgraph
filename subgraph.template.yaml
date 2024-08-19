@@ -203,3 +203,25 @@ dataSources:
           handler: handleMinDelayChange
       file: src/TimelockController.ts
 {{/ TimelockController }}
+{{# StakedEXA }}
+  - kind: ethereum/contract
+    name: StakedEXA
+    network: {{ graphNetwork }}
+    source:
+      address: '{{ address }}'
+      startBlock: {{ startBlock }}
+      abi: StakedEXA
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - RewardAmountNotified
+      abis:
+        - name: StakedEXA
+          file: node_modules/@exactly/protocol/deployments/{{ network }}/stEXA.json
+      eventHandlers:
+        - event: RewardAmountNotified(indexed address,indexed address,uint256)
+          handler: handleRewardAmountNotified
+      file: src/StakedEXA.ts
+{{/ StakedEXA }}

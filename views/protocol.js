@@ -31,6 +31,7 @@ module.exports = {
     return from(deployment, name);
   }).filter(Boolean),
   TimelockController: from(get('TimelockController'), 'TimelockController'),
+  StakedEXA: from(get('stEXA'), 'stEXA'),
 };
 
 /** @typedef {{ address: string, receipt?: { blockNumber?: number }, args?: any[] }} Deployment */
