@@ -9,6 +9,7 @@ module.exports = {
   rules: {
     'no-plusplus': 'off',
     'eslint-comments/no-unused-disable': 'error',
+    'prefer-destructuring': 'off', // not supported
   },
   overrides: [
     {
