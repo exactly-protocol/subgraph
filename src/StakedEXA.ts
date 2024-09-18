@@ -9,7 +9,6 @@ function loadStakingSharedFee(reward: Bytes): StakingSharedFee {
   if (sharedFee) return sharedFee;
 
   sharedFee = new StakingSharedFee(id);
-  sharedFee.reward = reward;
   sharedFee.amount = BigInt.zero();
   return sharedFee;
 }

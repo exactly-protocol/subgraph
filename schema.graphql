@@ -498,7 +498,6 @@ type RewardAmountNotified @entity {
 
 type StakingSharedFee @entity {
   id: ID!
-  reward: Bytes!
   amount: BigInt!
   lastUpdate: Int!
 }
