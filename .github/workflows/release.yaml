@@ -19,6 +19,5 @@ jobs:
           title: 🔖 new release
           version: bun version
           publish: bun changeset publish
-          setupGitUser: false
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
