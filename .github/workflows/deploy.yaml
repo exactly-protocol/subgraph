@@ -16,4 +16,4 @@ jobs:
 
       - run: bun graph auth --studio ${{ secrets.GRAPH_STUDIO_TOKEN }}
       - run: bun prepare:optimism
-      - run: bun graph deploy --studio -l {{ github.ref_name }} exactly-optimism
+      - run: bun graph deploy --studio -l ${{ github.ref_name }} exactly-optimism
