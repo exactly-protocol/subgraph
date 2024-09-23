@@ -24,7 +24,7 @@
     "node": ">=18"
   },
   "dependencies": {
-    "@exactly/protocol": "exactly/protocol#0890c2e27e00054e1643608eac413f8548ce1ded",
+    "@exactly/protocol": "exactly/protocol#96faa44",
     "@graphprotocol/graph-ts": "^0.35.1"
   },
   "devDependencies": {
