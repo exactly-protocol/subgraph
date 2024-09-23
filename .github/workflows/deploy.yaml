@@ -13,10 +13,6 @@ jobs:
       - run: bun install
       - run: bun run test
 
-      - run: bun graph auth --product hosted-service ${{ secrets.GRAPH_HOSTED_TOKEN }}
-      - run: bun prepare:optimism
-      - run: bun graph deploy --product hosted-service exactly/optimism
-
       - run: bun graph auth --studio ${{ secrets.GRAPH_STUDIO_TOKEN }}
-      - run: bun prepare:mainnet
-      - run: bun graph deploy --studio -l {{ github.ref_name }} exactly
+      - run: bun prepare:optimism
+      - run: bun graph deploy --studio -l {{ github.ref_name }} exactly-optimism
